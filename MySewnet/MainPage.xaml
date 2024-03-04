@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MySewnet.MainPage"
+             Shell.BackgroundColor="#4f2f5e"
+             Shell.FlyoutItemIsVisible="False">
+    <Shell.TitleView>
+        <HorizontalStackLayout VerticalOptions="Fill">
+            <HorizontalStackLayout.Background>
+                <LinearGradientBrush EndPoint="0,1">
+                    <GradientStop Color="#4f2f5e"
+                                  Offset="0.1" />
+                    <GradientStop Color="#583366"
+                                  Offset="1.0" />
+                </LinearGradientBrush>
+            </HorizontalStackLayout.Background>
+            <Image Source="sewnet.png"
+                   WidthRequest="100"
+                   HeightRequest="100"/>
+        </HorizontalStackLayout>
+    </Shell.TitleView>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem>
+            <ToolbarItem.IconImageSource>
+                <FontImageSource
+        FontFamily="MaterialIconsOutlined-Regular"
+        Glyph="&#xe8b8;"/>
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+
+
+    <Grid Padding="0"
+          Margin="0">
+        <Frame
+             Margin="0"
+             Padding="15, 0"
+             BorderColor="#583366"
+             VerticalOptions="Start"
+             HeightRequest="150"
+             CornerRadius="0">
+            <VerticalStackLayout Margin="0, 30, 0, 0">
+                <Label Text="Hi John Dave"
+                       TextColor="White"
+                       FontSize="25"
+                       FontFamily="PoppinsSemibold"/>
+                <Label Text="What do you want to do today?"
+                       TextColor="White"
+                       FontSize="15"
+                       FontFamily="MontserratMedium"/>
+            </VerticalStackLayout>
+            <Frame.Background>
+                <LinearGradientBrush EndPoint="0,1">
+                    <GradientStop Color="#583366"
+              Offset="0.1" />
+                    <GradientStop Color="#743e7b"
+              Offset="1.0" />
+                </LinearGradientBrush>
+            </Frame.Background>
+        </Frame>
+          <Frame BackgroundColor="Transparent"
+                 BorderColor="Transparent"
+                 Margin="0, 100, 0, 0">
+            <Grid ColumnSpacing="20"
+                  RowSpacing="20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Text="Launch Flutter Assistant"
+                        Padding="30"
+                        LineBreakMode="WordWrap"
+                        FontFamily="MontserratBold"
+                        FontSize="18"
+                        ContentLayout="Top, 20"
+                        TextColor="Black"
+                        Clicked="OnFlutterBtnClicked"
+                        BackgroundColor="White">
+                    <Button.Shadow>
+                        <Shadow Brush="Black"
+                                Offset="1,1"
+                                Radius="10"
+                                Opacity="0.4" />
+                    </Button.Shadow>
+                    <Button.ImageSource>
+                        <FontImageSource FontFamily="MaterialIconsOutlined-Regular"
+                     Glyph="&#xe89e;"
+                     Size="50"
+                     Color="Black"/>
+                    </Button.ImageSource>
+                </Button>
+                <Button Text="Launch Maui Assistant"
+                        Grid.Column="1"
+                        LineBreakMode="WordWrap"
+                        FontSize="18"
+                        FontFamily="MontserratBold"
+                        Clicked="OnMauiBtnClicked"
+                        ContentLayout="Top, 20"
+                        Padding="30"
+                        TextColor="Black"
+                        BackgroundColor="White">
+                    <Button.ImageSource>
+                        <FontImageSource FontFamily="MaterialIconsOutlined-Regular"
+                                         Glyph="&#xe89e;"
+                                         Size="50"
+                                         Color="Black"/>
+                    </Button.ImageSource>
+                    <Button.Shadow>
+                        <Shadow Brush="Black"
+                                Offset="1,1"
+                                Radius="10"
+                                Opacity="0.4" />
+                    </Button.Shadow>
+                </Button>
+                <Button Text="Share Files"
+                        Grid.Row="1"
+                        LineBreakMode="WordWrap"
+                        FontSize="18"
+                        FontFamily="MontserratBold"
+                        Clicked="OnShareBtnClicked"
+                        ContentLayout="Top, 20"
+                        Padding="30"
+                        TextColor="Black"
+                        BackgroundColor="White">
+                        <Button.ImageSource>
+                            <FontImageSource FontFamily="MaterialIconsOutlined-Regular"
+                             Glyph="&#xe80d;"
+                             Size="50"
+                             Color="Black"/>
+                        </Button.ImageSource>
+                        <Button.Shadow>
+                            <Shadow Brush="Black"
+                                    Offset="1,1"
+                                    Radius="10"
+                                    Opacity="0.4" />
+                        </Button.Shadow>
+                </Button>
+            </Grid>
+        </Frame>
+        
+    </Grid>
+
+</ContentPage>
